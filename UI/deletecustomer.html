@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="utf-8">
+  <title>LMS</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+ integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+     <script src="https://kit.fontawesome.com/b0933153bc.js" crossorigin="anonymous"></script>
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+	 <style>
+         li {
+		  float: left;
+		  color: white;
+		}
+     </style>
+     <!--Footer styles-->
+     <style>
+
+        a {
+            font-size: 11.5pt;
+        }        
+        .col_white_amrc { color:#FFF;}
+        footer { width:100%; background-color:#303030; min-height:250px; padding:10px 0px 25px 0px ;}
+        .pt2 { padding-top:40px ; margin-bottom:20px ;}
+        footer p { font-size:13px; color:#CCC; padding-bottom:0px; margin-bottom:8px;}
+        .mb10 { padding-bottom:15px ;}
+        .footer_ul_amrc { margin:0px ; list-style-type:none ; font-size:14px; padding:0px 0px 10px 0px ; }
+        .footer_ul_amrc li {padding:0px 0px 5px 0px;}
+        .footer_ul_amrc li a{ color:#CCC;}
+        .footer_ul_amrc li a:hover{ color:#fff; text-decoration:none;}
+        .fleft { float:left;}
+        .padding-right { padding-right:10px; }
+        
+        .footer_ul2_amrc {margin:0px; list-style-type:none; padding:0px;}
+        .footer_ul2_amrc li p { display:table; }
+        .footer_ul2_amrc li a:hover { text-decoration:none;}
+        .footer_ul2_amrc li i { margin-top:5px;}
+        
+        .bottom_border { border-bottom:1px solid #323f45; padding-bottom:20px;}
+        .foote_bottom_ul_amrc {
+        list-style-type:none;
+        padding:0px;
+        display:table;
+        margin-top: 10px;
+        margin-right: auto;
+        margin-bottom: 10px;
+        margin-left: auto;
+        }
+        .foote_bottom_ul_amrc li { display:inline;}
+        .foote_bottom_ul_amrc li a { color:#999; margin:0 12px;}
+        
+        .social_footer_ul { display:table; margin:15px auto 0 auto; list-style-type:none;  }
+        .social_footer_ul li { padding-left:20px; padding-top:10px; float:left; }
+        .social_footer_ul li a { color:#CCC; border:1px solid #CCC; padding:8px;border-radius:50%;}
+        .social_footer_ul li i {  width:20px; height:20px; text-align:center;}
+        
+        </style>
+         <style type="text/css">
+            #overlay
+            {
+                position: fixed;
+                top:0;
+                bottom:0;
+                left:0;
+                right:0;
+                background:rgb(0,0,0,0.6);
+            }
+         </style>
+</head>
+
+  <body>
+  
+    <div class="container-fluid">
+        <div class="row bg-dark">
+            <div class="col-lg-1">
+            </div>
+            <div class="col-lg-4">
+                <p class="text-center text-light display-4 pt-1"
+             style="font-size: 21pt;"><img src="logo.png" width="41px">&nbsp;Library Management System</p>
+            </div>        
+            <div class="col-lg-4">
+            <ul class="pt-2" style="font-size: 17pt;">         
+                <li><a href="customer.html">Customers</a>&nbsp; &nbsp; &nbsp;&nbsp;</li>
+                <li><a href="book.html">Books</a>&nbsp; &nbsp; &nbsp;&nbsp;</li>
+                <li><a href="lend.html">Lend</a></li>
+            </ul>
+            </div>
+        
+            <form class="navbar-form navbar-left" action="searchcustomer">
+                <div class="input-group">
+                  <input type="text" class="form-control" v-model="search" style="font-size: 9pt;" placeholder="Search">
+                  <div class="input-group-btn">
+                    <button class="btn btn-default" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </div>
+                </div>
+              </form>
+        </div>
+    </div>
+     
+   <br> <br> <br> <br> <br> <br> <br><br> <br> <br> <br> <br> <br> <br><br> <br> <br> <br>
+   <!--footer starts from here-->
+<footer class="footer" >
+       <div class="container bottom_border">
+       <div class="row">
+       <div class=" col-sm-4 col-md col-sm-4  col-12 col">
+       <h3 class="headin5_amrc col_white_amrc pt2">Contact</h3>
+       <!--headin5_amrc-->
+       <p  style="font-size: 11.5pt;"class="mb10 "> This is a library management system. It has ability to record customer details, book 
+           details and  details of lend books.</p>
+       <p style="font-size: 11pt;"><i class="fa fa-location-arrow"></i> 39/50,Main road,Matara </p>
+       <p style="font-size: 11pt;"><i class="fa fa-phone"></i>  +94 0412221097 </p>
+       <p style="font-size: 11pt;"><i class="fa fa fa-envelope"></i> librarymanagementsystem@gmail.com  </p>
+       
+       </div>
+       
+       <div class=" col-sm-4 col-md  col-6 col">
+       <h3 class="headin5_amrc col_white_amrc pt2">&nbsp; &nbsp;Quick links</h3>
+       <!--headin5_amrc-->
+       <ul class="footer_ul_amrc">
+       <li>&nbsp; &nbsp; <a href="book.html">Book</a></li>
+       <li>&nbsp; &nbsp; <a href="customer.html">Customer</a></li>
+       <li>&nbsp; &nbsp; <a href="lend.html">Lend</a></li>
+       </ul>
+       <!--footer_ul_amrc ends here-->
+       </div>
+       
+       
+       <div class=" col-sm-4 col-md  col-12 col">
+       <h3 class="headin5_amrc col_white_amrc pt2">Follow Us</h3>
+       <!--headin5_amrc ends here-->
+       
+       <ul class="footer_ul2_amrc">
+       
+       <a href="#"><i class="fab fa-twitter fleft padding-right"></i> </a><p><a href="http://www.nibm.lk">Twitter</a></p>
+       <a href="#"><i class="fab fa-facebook fleft padding-right"></i> </a><p><a href="http://www.nibm.lk">Facebook</a></p>
+       </ul>
+       <!--footer_ul2_amrc ends here-->
+       </div>
+       </div>
+       </div>
+       
+       
+       <div class="container">
+       <!--foote_bottom_ul_amrc ends here-->
+       <p style="font-size: 10pt;" class="text-center">Copyright @2020| Library Management system</p>
+       
+       </div>
+       
+       </footer>
+
+
+         <!--Delete User-->
+         <div id="overlay" v-if="showDeleteModal">
+		 		<br><br>
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Delete Customer</h4>
+                        <a type="button" class="close" href="customer.html">
+                            <span aria-hidden="true">&times;</span>
+                        </a>
+                    </div>
+                    <div class="modal-body p-4" id="app">
+                             <div class="modal-body p-4">
+                                <h4 class="text-danger">Are you sure want to delete a Customer?</h4>
+                                <h5>You are deleting {{firstName}}</h5>
+                                <hr>
+                                <button @click="myFunction()" class="btn btn-danger btn-lg">Yes</button>
+                                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                                <a type="button" class="btn btn-success btn-lg" href="customer.html">No</a>
+								<br><br>
+								<div class="alert alert-danger" v-if="errorMsg">
+									Somthing Went Wrong!
+								</div>
+								
+								<div class="alert alert-success" v-if="successMsg">
+									Successfully Deleted!
+								</div>
+                             </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+       <script src="https://unpkg.com/vue"></script>
+       <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+       <script src="https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.js"></script>
+       <script>
+        const queryString = window.location.search;
+
+        const urlParams = new URLSearchParams(queryString);
+
+        const page_type = urlParams.get('id')
+
+        const firstname = urlParams.get('firstName')
+        
+        
+
+   
+        console.log(page_type);
+        console.log(firstname);
+        
+
+        const url = "http://localhost:8087/customers/"+page_type;
+
+
+     new Vue({
+     el: '#app',
+      
+      data: {
+          firstName:'',
+		  successMsg:''
+      }, 
+      mounted() {
+        this.firstName=firstname;
+    
+       }, 
+       methods:{
+        myFunction: function () {
+				axios
+                    .delete(url);
+				this.successMsg=true;
+        }
+        
+
+       }
+    });
+    </script>
+
+  </body>
+</html>
